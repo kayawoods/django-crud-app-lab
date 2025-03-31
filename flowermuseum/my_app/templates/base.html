@@ -8,8 +8,7 @@
     <link rel="shortcut icon" type="image/png" href="" />
     <title>Flower Collector</title>
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
-    {% block head %} 
-    {% endblock %}
+    {% block head %}{% endblock %}
   </head>
   <body>
     <header>
@@ -26,8 +25,7 @@
       </nav>
     </header>
     <main>
-     {% block content %} 
-     {% endblock %}
-     </main>
+      {% block content %}{% endblock %}
+    </main>
   </body>
 </html>

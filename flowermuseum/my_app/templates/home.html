@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}" />
+{% endblock %}
+
+{% block content %}
+<section class="logo-container">
+  <div class="flower-container">
+    <img src="{% static 'images/flower3.svg' %}" alt="A cool flower" class="bouncy-flower" />
+    <img src="{% static 'images/flower1.svg' %}" alt="A cool flower" class="bouncy-flower" />
+    <img src="{% static 'images/flower2.svg' %}" alt="A cool flower" class="bouncy-flower" />
+  </div>
+
+  <div class="main-logo">
+    <img src="{% static 'images/header-logo.svg' %}" alt="The Flower Collector Logo" />
+  </div>
+</section>
+{% endblock %}
+
+
