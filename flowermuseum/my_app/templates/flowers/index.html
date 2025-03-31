@@ -1,0 +1,36 @@
+{% extends 'base.html' %} {% load static %} {% block head %}
+<link rel="stylesheet" href="{% static 'css/flowers/flower-index.css' %}" />
+{% endblock %} {% block content %}
+
+<section class="page-header">
+    <h1>Flower List</h1>
+    <img src="{% static 'images/flower1.svg' %}" alt="A cool flower" />
+    <img src="{% static 'images/flower2.svg' %}" alt="A cool flower" />
+    <img src="{% static 'images/flower3.svg' %}" alt="A cool flower" />
+    <img src="{% static 'images/flower4.svg' %}" alt="A cool flower" />
+    <img src="{% static 'images/flower1.svg' %}" alt="A cool flower" />
+    <img src="{% static 'images/flower2.svg' %}" alt="A cool flower" />
+    <img src="{% static 'images/flower3.svg' %}" alt="A cool flower" />
+    <img src="{% static 'images/flower4.svg' %}" alt="A cool flower" />
+    <img src="{% static 'images/flower1.svg' %}" alt="A cool flower" />
+    <img src="{% static 'images/flower2.svg' %}" alt="A cool flower" />
+    <img src="{% static 'images/flower3.svg' %}" alt="A cool flower" />
+    <img src="{% static 'images/flower4.svg' %}" alt="A cool flower" />
+</section>
+
+<section class="card-container">
+    {% for flower in flowers %}
+    <div class="card">
+        <div class="card-content">
+            <div class="card-img-container">
+                <img src="{% static 'images/one-flower.svg' %}" alt="Anther cool flower" />
+            </div>
+            <h2 class="card-title"><strong>First Name:</strong> {{ flower.chosen_name }}</h2>
+            <p><strong>About:</strong> A {{ flower.type }} that smells of {{ flower.scent }}</p>
+            <p><small><strong>Notes:</strong> {{ flower.description }}</small></p>
+        </div>
+    </div>
+    {% endfor %}
+</section>
+
+{% endblock %}
