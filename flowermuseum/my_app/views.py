@@ -1,19 +1,11 @@
 from django.shortcuts import render
+from .models import Flower
 
 
-class Flower: 
-     def __init__(self, chosen_name, type, scent, description):
-          self.chosen_name = chosen_name 
-          self.type = type
-          self.scent = scent 
-          self.description = description 
-flowers = [ 
-     Flower('Marcus', 'Sunflower', 'Floral Butter', 'lush'), 
-     Flower('Hannah', 'Rose', 'Romance', 'thorny'),
-     Flower('Lila', 'Daisy', 'Skunk', 'vibrant af')
-]
+
 
 def flower_index(request): 
+     flowers = Flower.objects.all()
      return render(request, 'flowers/index.html', {'flowers': flowers})
 
 def home(request): 
@@ -21,3 +13,7 @@ def home(request):
 
 def about(request):
      return render(request, 'about.html')
+
+def flower_detail(request, flower_id):
+     flower = Flower.objects.get(id=flower_id)
+     return render(request, 'flowers/details.html', {'flower': flower})

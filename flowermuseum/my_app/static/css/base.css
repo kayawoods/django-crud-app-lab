@@ -41,7 +41,7 @@ body {
   --submit: #6fbb9b;
   --warn: #ff9966;
   --danger: #cc3333;
-  --secondary: #4a4a4a;
+  --secondary: #eccccc;
   --card-box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.1);
   --font-xtreme: 4.2rem;
   --font-xxl: 3.6rem;
@@ -109,6 +109,7 @@ nav li {
   display: flex;
   align-items: center;
   margin: 20px;
+  
 }
 
 .btn {

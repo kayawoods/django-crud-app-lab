@@ -3,7 +3,7 @@
 {% endblock %} {% block content %}
 
 <section class="page-header">
-    <h1>Flower List</h1>
+    <h1>Flower Archives</h1>
     <img src="{% static 'images/flower1.svg' %}" alt="A cool flower" />
     <img src="{% static 'images/flower2.svg' %}" alt="A cool flower" />
     <img src="{% static 'images/flower3.svg' %}" alt="A cool flower" />
@@ -21,14 +21,16 @@
 <section class="card-container">
     {% for flower in flowers %}
     <div class="card">
+        <a href="{% url 'flower-detail' flower.id %}">
         <div class="card-content">
             <div class="card-img-container">
                 <img src="{% static 'images/one-flower.svg' %}" alt="Anther cool flower" />
             </div>
             <h2 class="card-title"><strong>First Name:</strong> {{ flower.chosen_name }}</h2>
-            <p><strong>About:</strong> A {{ flower.type }} that smells of {{ flower.scent }}</p>
+            <p><strong>About:</strong> A {{ flower.type }} that smells {{ flower.scent }}</p>
             <p><small><strong>Notes:</strong> {{ flower.description }}</small></p>
         </div>
+    </a>
     </div>
     {% endfor %}
 </section>
