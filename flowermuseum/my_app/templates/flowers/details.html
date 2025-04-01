@@ -6,7 +6,8 @@
 {% block content %}
 <section class="flower-container">
   <div class="flower-img">
-    <img src="" alt="A skater boy cat" />
+    <img src="{{ flower.image }}" alt="{{ flower.chosen_name }}" />
+  </div>
   </div>
   <div class="flower-details">
     <h1>Chosen Name:{{ flower.chosen_name }}</h1>

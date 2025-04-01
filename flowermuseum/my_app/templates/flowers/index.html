@@ -24,7 +24,7 @@
         <a href="{% url 'flower-detail' flower.id %}">
         <div class="card-content">
             <div class="card-img-container">
-                <img src="{% static 'images/one-flower.svg' %}" alt="Anther cool flower" />
+                <img src="{{ flower.image }}" alt="{{ flower.chosen_name }}" />
             </div>
             <h2 class="card-title"><strong>First Name:</strong> {{ flower.chosen_name }}</h2>
             <p><strong>About:</strong> A {{ flower.type }} that smells {{ flower.scent }}</p>
