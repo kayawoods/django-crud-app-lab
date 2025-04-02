@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 class Flower(models.Model):
     chosen_name = models.CharField(max_length=100)
@@ -10,3 +11,8 @@ class Flower(models.Model):
     def __str__(self):
         return self.chosen_name
  
+    def get_absolute_url(self): 
+        return reverse('flower-detail', kwargs={'flower_id': self.id})
+    
+    
+

@@ -13,6 +13,10 @@
     <h1>Chosen Name:{{ flower.chosen_name }}</h1>
       <h2>A {{ flower.type }} that smells like {{ flower.scent }}</h2>
     <p>{{ flower.description }}</p>
+    <div class="flower-actions">
+      <a href="{% url 'flower-update' flower.id %}" class="btn warn">Edit</a>
+      <a href="{% url 'flower-delete' flower.id %}" class="btn danger">Delete</a>
+    </div>
   </div>
 </section>
 {% endblock %}
