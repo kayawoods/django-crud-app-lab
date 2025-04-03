@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Flower 
+from .models import Flower, Watering
 
 admin.site.register(Flower)
-# Register your models here.
+admin.site.register(Watering)
+
