@@ -29,5 +29,8 @@ class Watering(models.Model):
     )                       
     flower = models.ForeignKey(Flower, on_delete=models.CASCADE)
 
-def __str__(self): 
-    return f"{self.get_amount_display()} on {self.date}"
+    def __str__(self): 
+        return f"{self.get_amount_display()} on {self.date}"
+    
+    class Meta: 
+        ordering = ['-date']
